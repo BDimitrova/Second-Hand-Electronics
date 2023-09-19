@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amaranth|Courgette');
+@import url('https://fonts.google.com/specimen/Roboto+Condensed');
 
 body {
     width: 100%;
@@ -10,7 +10,7 @@ body {
 }
 
 * {
-    font-family: Amaranth;
+    font-family: Roboto, "Condensed", serif;
 }
 
 a {
