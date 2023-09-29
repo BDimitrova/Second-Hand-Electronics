@@ -4,12 +4,12 @@ let electronicsSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        minLength: 20,
+        minLength: 10,
     },
     type: {
         type: String,
         required: true,
-        minLength: 10,
+        minLength: 2,
     },
     damages: {
         type: String,
@@ -25,7 +25,7 @@ let electronicsSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 10,
-        maxLength: 100
+        maxLength: 200
     },
     production: {
         type: Number,
