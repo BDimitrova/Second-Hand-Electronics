@@ -68,4 +68,21 @@ router.get('/:electronicsId/delete', async (req, res) => {
     res.redirect('/electronics/catalog');
 });
 
+router.get('/search', async (req, res) => {
+    let electronicsName = req.query.searchName;
+    let electronicsType = req.query.searchType;
+
+    console.log(electronicsName);
+    console.log(electronicsType);
+
+    let electronics = await electronicsServices.search(electronicsName, electronicsType);
+
+    if(electronics == undefined) {
+        electronics = await electronicsServices.getAll();
+    }
+
+
+    res.render('search', {electronics});
+});
+
 module.exports = router;

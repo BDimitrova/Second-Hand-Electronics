@@ -13,13 +13,13 @@ exports.update = (electronicsId, electronicsData) => Electronics.findByIdAndUpda
 
 exports.delete = (electronicsId) => Electronics.findByIdAndDelete(electronicsId);
 
-// exports.search = (toyTitle, toyCharity) => {
-//     if (toyTitle) {
-//         return (Electronics.find({ title: { $regex: toyTitle, $options: 'i' } }).lean());
-//     }
+exports.search = (electronicsName, electronicsType) => {
+    if (electronicsName) {
+        return (Electronics.find({ name: { $regex: electronicsName, $options: 'i' } }).lean());
+    }
 
-//     if (!toyTitle && toyCharity) {
-//         return (Electronics.find({ toyCharity: toyCharity }).lean());
-//     }
+    if (!electronicsName && electronicsType) {
+        return (Electronics.find({ electronicsType: electronicsType }).lean());
+    }
 
-// }
+}
