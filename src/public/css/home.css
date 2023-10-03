@@ -32,11 +32,12 @@
     font-weight: bold;
     height: auto;
     width: 20%;
-    box-shadow: 0 5px 10px white;
+    box-shadow: 0 5px 10px black;
 }
 
 .errorContainer>p {
-    background: rgba(211, 28, 28, 0.677);
+    background: black;
+    color: white;
     margin: 0;
     font-size: 20px;
     padding: 30px;
